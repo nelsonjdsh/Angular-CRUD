@@ -1,25 +1,29 @@
 {
-  "name": "server",
+  "name": "Api_Challenge",
   "version": "1.0.0",
-  "description": "NodeJS Server for API",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -w",
-    "dev": "nodemon dist/index.js"
+    "build": "tsc",
+    "dev": "nodemon src/index.ts --exec ts-node"
   },
-  "author": "Nelson Santos",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "promise-mysql": "^5.0.3"
-  },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
-    "@types/morgan": "^1.9.3",
-    "nodemon": "^2.0.12"
+    "@types/morgan": "^1.9.1",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/mysql": "^2.15.15",
+    "express": "^4.17.1",
+    "ldapcrud": "^1.4.1",
+    "ldapjs": "^2.2.0",
+    "ldapts": "^2.8.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5"
   }
 }

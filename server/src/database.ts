@@ -1,11 +1,23 @@
-import mysql from 'mysql';`enter code here`
-import keys from './keys';
+import { createPool } from "mysql2/promise";
 
-const pool = mysql.createPool(keys.database);
 
-pool.getConnection((err, connection) => {
-     if (err) throw err; connection.release(); 
-     console.log('Database Connection Works!'); 
-});
+// Conexion con la base de datos
+export async function connect() {
+    const connection = await createPool({
+        host: "localhost",
+        user: "root",
+        password: "secret23",
+        port: 3306,
+        database: "BANCOJSH"
+    })
+    return connection;
+}
 
-export default pool
+// CREATE TABLE TBL_cliente(
+//     id_cliente INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//     nombre_cliente VARCHAR(180) NOT NULL,
+//     apellido_cliente VARCHAR(180) NOT NULL,
+//     cedula_cliente VARCHAR(180) NOT NULL,
+//     correo_cliente VARCHAR(180) NOT NULL,
+//     telefono_cliente VARCHAR(180) NOT NULL,
+// );
