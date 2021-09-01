@@ -13,7 +13,7 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="titulo">{{ accion | uppercase }} CLIENTE</h5>
+                    <h5 class="titulo">{{ accion  }} Cliente</h5>
 
                     <form [formGroup]="form" (ngSubmit)="guardarCliente()">
                         <div class="input-group input-group-lg mb-3">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text">
-                                <i class="fas fa-user"
+                                <i class="fas fa-hashtag"
                                 [class.green-icon]="this.form.get('Cedula')?.valid"
                                 [class.red-icon]="this.form.get('Cedula')?.invalid && this.form.get('Cedula')?.touched"></i>
                             </span>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text">
-                                <i class="fas fa-user"
+                                <i class="fas fa-envelope"
                                 [class.green-icon]="this.form.get('Correo')?.valid"
                                 [class.red-icon]="this.form.get('Correo')?.invalid && this.form.get('Correo')?.touched"></i>
                             </span>
@@ -51,7 +51,7 @@
                         <div class="d-grid gap-2">
                             <div class="input-group input-group-lg mb-3">
                                 <span class="input-group-text">
-                                    <i class="fas fa-user"
+                                    <i class="fas fa-phone"
                                     [class.green-icon]="this.form.get('Telefono')?.valid"
                                     [class.red-icon]="this.form.get('Telefono')?.invalid && this.form.get('Telefono')?.touched"></i>
                                 </span>
