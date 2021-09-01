@@ -89,13 +89,12 @@ export class ClienteComponent implements OnInit {
   editarcliente(cliente: any) {
     this.accion = 'Editar';
     this.id_cliente = cliente.id_cliente;
-
     this.form.patchValue({
-      nombre_cliente: cliente.nombre_cliente,
-      apellido_cliente: cliente.apellido_cliente,
-      cedula_cliente: cliente.cedula_cliente,
-      correo_cliente: cliente.correo_cliente,
-      telefono_cliente: cliente.telefono_cliente
+      Nombre: cliente.nombre_cliente,
+      Apellido: cliente.apellido_cliente,
+      Cedula: cliente.cedula_cliente,
+      Correo: cliente.correo_cliente,
+      Telefono: cliente.telefono_cliente
     })
   }
 
