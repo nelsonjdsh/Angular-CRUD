@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #B35050;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B35050, #B35050);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B35050, #B35050); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.titulo {
+    font-family: 'Verdana ', sans-serif;
+    text-align: center;
+}

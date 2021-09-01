@@ -1,5 +1,6 @@
 import express, { Application, urlencoded } from "express";
 import morgan from 'morgan';
+var cors = require('cors');
 import clientesRoutes from "./routes/clientes.routes";
 
 
@@ -20,6 +21,7 @@ export class App {
 
     middlewares() {
         this.app.use(morgan('dev'))
+        this.app.use(cors());
         this.app.use(express.json());
     }
 

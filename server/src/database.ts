@@ -15,7 +15,7 @@ export async function connect() {
 
 // CREATE TABLE TBL_cliente(
 //     id_cliente INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-//     nombre_cliente VARCHAR(180) NOT NULL,
+//     Nombre_cliente VARCHAR(180) NOT NULL,
 //     apellido_cliente VARCHAR(180) NOT NULL,
 //     cedula_cliente VARCHAR(180) NOT NULL,
 //     correo_cliente VARCHAR(180) NOT NULL,

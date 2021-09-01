@@ -1,0 +1,92 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="titulo">Banco JSH</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="titulo">{{ accion | uppercase }} CLIENTE</h5>
+
+                    <form [formGroup]="form" (ngSubmit)="guardarCliente()">
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"
+                                [class.green-icon]="this.form.get('Nombre')?.valid"
+                                [class.red-icon]="this.form.get('Nombre')?.invalid && this.form.get('Nombre')?.touched"></i>
+                            </span>
+                            <input formControlName="Nombre" type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"
+                                [class.green-icon]="this.form.get('Apellido')?.valid"
+                                [class.red-icon]="this.form.get('Apellido')?.invalid && this.form.get('Apellido')?.touched"></i>
+                            </span>
+                            <input formControlName="Apellido" type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"
+                                [class.green-icon]="this.form.get('Cedula')?.valid"
+                                [class.red-icon]="this.form.get('Cedula')?.invalid && this.form.get('Cedula')?.touched"></i>
+                            </span>
+                            <input formControlName="Cedula" type="text" class="form-control" placeholder="Cedula">
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"
+                                [class.green-icon]="this.form.get('Correo')?.valid"
+                                [class.red-icon]="this.form.get('Correo')?.invalid && this.form.get('Correo')?.touched"></i>
+                            </span>
+                            <input formControlName="Correo" type="text" class="form-control" placeholder="Correo">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <div class="input-group input-group-lg mb-3">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"
+                                    [class.green-icon]="this.form.get('Telefono')?.valid"
+                                    [class.red-icon]="this.form.get('Telefono')?.invalid && this.form.get('Telefono')?.touched"></i>
+                                </span>
+                                <input formControlName="Telefono" type="text" class="form-control" placeholder="Telefono">
+                            </div>
+                            <button [disabled]="this.form.invalid" type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-database"></i>&nbsp; Aceptar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="titulo">Listado de Clientes</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr *ngFor="let cliente of Clientes">
+                                <td>{{ cliente.nombre_cliente + ' ' + cliente.apellido_cliente }}</td>
+                                <td>{{ cliente.telefono_cliente }}</td>
+                                <td>{{ cliente.cedula_cliente }}</td>
+                                <td>
+                                    <i (click)="editarcliente(cliente)" class="far fa-edit text-info"></i>
+                                </td>
+                                <td>
+                                    <i (click)="eliminarcliente(cliente.id_cliente)" class="far fa-trash-alt text-danger"></i>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

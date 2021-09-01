@@ -32,7 +32,6 @@ export async function deleteclienteId(req: Request, res: Response) {
     const id_cliente = req.params.id_cliente;
     const conn = await connect();
     await conn.query('DELETE FROM TBL_cliente WHERE id_cliente = ?', [id_cliente])
-    // await conn.query('CHECKIDENT(pais_origen,reseed,0)')
     return res.json({
         message: "Cliente Eliminado"
     });

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/tdd-ui-test'),
+      dir: require('path').join(__dirname, './coverage/FECliente'),
       subdir: '.',
       reporters: [
         { type: 'html' },
