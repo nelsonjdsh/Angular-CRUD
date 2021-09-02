@@ -78,7 +78,7 @@ export class ClienteComponent implements OnInit {
 
   eliminarcliente(id_cliente: number) {
     this._ClienteService.deleteCliente(id_cliente).subscribe(data => {
-      this.toastr.error('El cliente fue eliminado con exito!','Cliente Eliminado');
+      this.toastr.success('El cliente fue eliminado con exito!','Cliente Eliminado');
       this.GetClientes();
     }, error => {
       console.log(error);
