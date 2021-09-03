@@ -12,7 +12,6 @@ export class App {
         this.settings();
         this.middlewares();
         this.routes();
-
     }
 
     settings() {

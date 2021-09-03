@@ -24,8 +24,6 @@ export async function readcliente(req: Request, res: Response): Promise<Response
     const conn = await connect();
     const cliente = await conn.query('SELECT * FROM TBL_cliente WHERE id_cliente = ?', [id_cliente])
     return res.json(cliente[0]);
-
-
 }
 
 export async function deleteclienteId(req: Request, res: Response) {
