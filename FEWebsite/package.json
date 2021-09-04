@@ -1,6 +1,7 @@
 {
   "name": "fecliente",
   "version": "0.0.0",
+  "author": "Nelson Santos",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
