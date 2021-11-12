@@ -6,7 +6,6 @@ export async function readclientes(req: Request, res: Response): Promise<Respons
     const con = await connect();
     const clientes = await con.query('SELECT * FROM TBL_cliente');
     return res.json(clientes[0]);
-
 }
 
 export async function createcliente(req: Request, res: Response) {

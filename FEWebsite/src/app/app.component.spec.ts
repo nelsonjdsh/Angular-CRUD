@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {ClienteComponent  } from "../app/components/cliente/cliente.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -14,6 +15,12 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
+  });
+
+  it('Should sum two numbers.', () => {
+    const fixture =  TestBed.createComponent(ClienteComponent);
+    const app = fixture.componentInstance;
+    expect(app.GetClientes()).toThrowError()
   });
 
   it(`should have as title 'FECliente'`, () => {
